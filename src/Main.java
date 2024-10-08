@@ -12,8 +12,7 @@ public class Main
         boolean done2 = false;
         boolean done3 = false;
 
-        do
-        {
+        do {
         do
         {
             System.out.print("\nPlayer A, please enter your Rock, Paper, Scissors move (R, P, or S): ");
@@ -29,6 +28,7 @@ public class Main
                     done1 = true;
                 } else {
                     System.out.println("\nPlayer A, please enter R, P, or S. You entered: " + playerAInput + ".");
+                    done1 = false;
                 }
         }while(!done1);
 
@@ -47,6 +47,7 @@ public class Main
                 done2 = true;
             } else {
                 System.out.println("\nPlayer B, please enter R, P, or S. You entered: " + playerBInput + ".");
+                done2 = false;
             }
         }while(!done2);
 
@@ -89,6 +90,7 @@ public class Main
                 } else
                 {
                     System.out.println("\nPlease enter Y or N. You entered: " + userPrompt + ".");
+                    done3 = false;
                 }
             }while(!done3);
         }while (userPrompt.equalsIgnoreCase("Y"));
