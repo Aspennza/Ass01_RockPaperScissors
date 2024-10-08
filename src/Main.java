@@ -8,9 +8,9 @@ public class Main
         String userPrompt = "";
         String playerAInput = "";
         String playerBInput = "";
-        String trash = "";
         boolean done1 = false;
         boolean done2 = false;
+        boolean done3 = false;
 
         do
         {
@@ -50,51 +50,46 @@ public class Main
 
         do
         {
+            if(playerAInput.equalsIgnoreCase("R")) {
+                if(playerBInput.equalsIgnoreCase("R")){
+                    System.out.println("\nBoth players chose Rock! It's a tie!");
+                } else if(playerBInput.equalsIgnoreCase("P")){
+                    System.out.println("\nPaper covers Rock! Player B wins!");
+                } else {
+                    System.out.println("\nRock breaks Scissors! Player A wins!");
+                }
+            } else if(playerAInput.equalsIgnoreCase("P")) {
+                if(playerBInput.equalsIgnoreCase("R")){
+                    System.out.println("\nPaper covers Rock! Player A wins!");
+                } else if(playerBInput.equalsIgnoreCase("P")){
+                    System.out.println("\nBoth players chose Paper! It's a tie!");
+                } else {
+                    System.out.println("\nScissors cuts Paper! Player B wins!");
+                }
+            } else {
+                if(playerBInput.equalsIgnoreCase("R")){
+                    System.out.println("\nRock breaks Scissors! Player B wins!");
+                } else if(playerBInput.equalsIgnoreCase("P")){
+                    System.out.println("\nScissors cuts Paper! Player A wins!");
+                } else {
+                    System.out.println("\nBoth players chose Scissors! It's a tie!");
+                }
+            }
+            do {
+                System.out.print("\nWould you like to play again? Enter Y or N: ");
+                userPrompt = in.nextLine();
 
-
-
+                if(userPrompt.equalsIgnoreCase("Y"))
+                {
+                    done3 = true;
+                } else if(userPrompt.equalsIgnoreCase("N"))
+                {
+                    done3 = true;
+                } else
+                {
+                    System.out.println("\nPlease enter Y or N. You entered: " + userPrompt + ".");
+                }
+            }while(!done3);
         }while (userPrompt.equalsIgnoreCase("Y"));
-
-        //		do
-        //output “Player A, please enter your Rock, Paper, Scissors move (R, P, or S): ”
-        //			input playerAInput
-        //output “Player B, please enter your Rock, Paper, Scissors move (R, P, or S): ”
-        //			input playerBInput
-        //			if playerAInput == “R” then
-        //				if playerBInput == “R” then
-        //					output “Both players chose Rock; it’s a tie!”
-        //				else if playerBInput == “P” then
-        //					output “Paper beats Rock; Player B wins!”
-        //				else if playerBInput == “S” then
-        //					output “Rock beats Scissors; Player A wins!”
-        //				else
-        //output “Player B entered an invalid input: ” + playerBInput
-        //				endIf
-        //			else if playerAInput == “P” then
-        //				if playerBInput == “R” then
-        //					output “Paper beats Rock; Player A wins!”
-        //				else if playerBInput == “P” then
-        //output “Both players chose Paper; it’s a tie!”
-        //				else if playerBInput == “S” then
-        //					output “Scissors beats Paper; Player B wins!”
-        //				else
-        //output “Player B entered an invalid input: ” + playerBInput
-        //				endIf
-        //			else if playerAInput == “S” then
-        //				if playerBInput == “R” then
-        //					output “Rock beats Scissors; Player B wins!”
-        //				else if playerBInput == “P” then
-        //output “Scissors beats Paper; Player A wins!”
-        //				else if playerBInput == “S” then
-        //output “Both players chose Scissors; it’s a tie!”
-        //				else
-        //output “Player B entered an invalid input: ” + playerBInput
-        //				endIf
-        //			else
-        //output “Player A entered an invalid input: ” + playerAInput
-        //			endIf
-        //			output “Would you like to keep playing? Enter Y or N: ”
-        //			input userPrompt
-        //		while userPrompt == “Y”
     }
 }
