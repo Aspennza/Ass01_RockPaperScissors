@@ -14,6 +14,8 @@ public class Main
 
         do
         {
+        do
+        {
             System.out.print("\nPlayer A, please enter your Rock, Paper, Scissors move (R, P, or S): ");
             playerAInput = in.nextLine();
 
@@ -48,8 +50,7 @@ public class Main
             }
         }while(!done2);
 
-        do
-        {
+
             if(playerAInput.equalsIgnoreCase("R")) {
                 if(playerBInput.equalsIgnoreCase("R")){
                     System.out.println("\nBoth players chose Rock! It's a tie!");
