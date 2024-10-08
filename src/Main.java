@@ -14,7 +14,7 @@ public class Main
 
         do
         {
-            System.out.print("Player A, please enter your Rock, Paper, Scissors move (R, P, or S): ");
+            System.out.print("\nPlayer A, please enter your Rock, Paper, Scissors move (R, P, or S): ");
             playerAInput = in.nextLine();
 
             if(playerAInput.equalsIgnoreCase("R"))
@@ -26,17 +26,32 @@ public class Main
                 } else if(playerAInput.equalsIgnoreCase("S")) {
                     done1 = true;
                 } else {
-                    System.out.println("Please enter R, P, or S. You entered: " + playerAInput + ".");
+                    System.out.println("\nPlayer A, please enter R, P, or S. You entered: " + playerAInput + ".");
                 }
         }while(!done1);
 
+        do
+        {
+            System.out.print("\nPlayer B, please enter your Rock, Paper, Scissors move (R, P, or S): ");
+            playerBInput = in.nextLine();
+
+            if(playerBInput.equalsIgnoreCase("R"))
+            {
+                done2 = true;
+            } else if(playerBInput.equalsIgnoreCase("P"))
+            {
+                done2 = true;
+            } else if(playerBInput.equalsIgnoreCase("S")) {
+                done2 = true;
+            } else {
+                System.out.println("\nPlayer B, please enter R, P, or S. You entered: " + playerBInput + ".");
+            }
+        }while(!done2);
 
         do
         {
 
 
-
-            System.out.print("\n\nPlayer B, please enter your Rock, Paper, Scissors move (R, P, or S): ");
 
         }while (userPrompt.equalsIgnoreCase("Y"));
 
